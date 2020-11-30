@@ -1,0 +1,103 @@
+﻿@model IEnumerable<PurchasingApp.Models.PurchaseOrderModel>
+
+<div>
+
+
+    <h5 class="text-left">Purchase Order</h5>
+
+
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderyDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorCompanyName)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShippingName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShippingMethod)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QtyOrder)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UnitPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeliveryDate)
+                </th>
+                <th>
+                    <a onclick="showInPopup('@Url.Action("AddOrEdit","PurchaseOrder",null,Context.Request.Scheme)','New Purchase')" class="btn btn-sm btn-success text-white"><i class="fas fa-plus"> </i> New Order</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderyDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VendorCompanyName)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VendorPhone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShippingName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ShippingMethod)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QtyOrder)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UnitPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliveryDate)
+                    </td>
+                    <td>
+                        <div>
+                            <a onclick="showInPopup('@Url.Action("AddOrEdit","PurchaseOrder",new {id=item.PurchaseId},Context.Request.Scheme)','Update Purchase')" class="btn btn-sm btn-info text-white"><i class="fas fa-pencil-alt"></i> Edit</a>
+                            <form asp-action="Delete" asp-route-id="@item.PurchaseId" onsubmit="return jQueryAjaxDelete(this)" class="d-inline">
+                                <input type="hidden" asp-for="@item.PurchaseId" />
+                                <input type="submit" value="Delete" class="btn btn-sm btn-danger" />
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

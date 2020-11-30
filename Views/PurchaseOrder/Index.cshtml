@@ -1,0 +1,187 @@
+﻿@model IEnumerable<PurchasingApp.Models.PurchaseOrderModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div id="view-all">
+    @await Html.PartialAsync("_ViewAll", Model)
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="form-modal">
+    <div class="modal-dialog" style="max-width: 70%;" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+@*@model IEnumerable<PurchasingApp.Models.PurchaseOrderModel>
+
+    @{
+        ViewData["Title"] = "Index";
+    }
+
+    <h1>Index</h1>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorCompanyName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorContactName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShippingName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShippingCompanyName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShippingDept)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShippingAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShippingPhone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShippingVia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShippingMethod)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShippingTerm)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeliveryDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderyDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QtyOrder)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UnitPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PurchaseRemark)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VendorName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VendorCompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VendorContactName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VendorAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VendorPhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShippingName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShippingCompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShippingDept)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShippingAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShippingPhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShippingVia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShippingMethod)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShippingTerm)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DeliveryDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderyDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QtyOrder)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PurchaseRemark)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.PurchaseId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.PurchaseId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.PurchaseId">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>*@

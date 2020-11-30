@@ -176,3 +176,10 @@ D:\fetih\v2\PurchasingApp\obj\Debug\net5.0\Razor\Views\Vendors\Delete.cshtml.g.c
 D:\fetih\v2\PurchasingApp\obj\Debug\net5.0\Razor\Views\Vendors\Details.cshtml.g.cs
 D:\fetih\v2\PurchasingApp\obj\Debug\net5.0\Razor\Views\Vendors\Edit.cshtml.g.cs
 D:\fetih\v2\PurchasingApp\obj\Debug\net5.0\Razor\Views\Vendors\Index.cshtml.g.cs
+D:\fetih\v2\PurchasingApp\obj\Debug\net5.0\Razor\Views\PurchaseOrder\AddOrEdit.cshtml.g.cs
+D:\fetih\v2\PurchasingApp\obj\Debug\net5.0\Razor\Views\PurchaseOrder\Create.cshtml.g.cs
+D:\fetih\v2\PurchasingApp\obj\Debug\net5.0\Razor\Views\PurchaseOrder\Delete.cshtml.g.cs
+D:\fetih\v2\PurchasingApp\obj\Debug\net5.0\Razor\Views\PurchaseOrder\Details.cshtml.g.cs
+D:\fetih\v2\PurchasingApp\obj\Debug\net5.0\Razor\Views\PurchaseOrder\Edit.cshtml.g.cs
+D:\fetih\v2\PurchasingApp\obj\Debug\net5.0\Razor\Views\PurchaseOrder\Index.cshtml.g.cs
+D:\fetih\v2\PurchasingApp\obj\Debug\net5.0\Razor\Views\PurchaseOrder\_ViewAll.cshtml.g.cs
