@@ -47,15 +47,15 @@ namespace PurchasingApp.Models
 
         //Modif
         [Column(TypeName = "nvarchar(100)")]
-        [DisplayName("Shpping To")]
+        [DisplayName("Shipping To")]
         public string ShippingName { get; set; }
 
         [Column(TypeName = "nvarchar(100)")]
-        [DisplayName("Shpping Company Name")]
+        [DisplayName("Shipping Company Name")]
         public string ShippingCompanyName { get; set; }
 
         [Column(TypeName = "nvarchar(100)")]
-        [DisplayName("Shpping Departemen")]
+        [DisplayName("Shipping Departement")]
         public string ShippingDept { get; set; }
 
         [Column(TypeName = "nvarchar(100)")]
@@ -97,7 +97,7 @@ namespace PurchasingApp.Models
         [DisplayName("Qty Order")]
         public int QtyOrder { get; set; }
 
-        [DisplayName("unit price")]
+        [DisplayName("Unit Price")]
         public int UnitPrice { get; set; }
 
         [Column(TypeName = "nvarchar(100)")]
