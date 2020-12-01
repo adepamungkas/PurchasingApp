@@ -43,13 +43,23 @@
                 </div>
             </div>
 
+            
 
             <div class="row">
                 <div class="col-md-5">
                     <div class="form-group">
                         <b> <label asp-for="VendorName" class="control-label"></label></b>
-                        <input asp-for="VendorName" class="form-control  form-control-sm" />
-                        <span asp-validation-for="VendorName" class="text-danger"></span>
+                        @*<input asp-for="VendorName" class="form-control  form-control-sm" />
+                        <span asp-validation-for="VendorName" class="text-danger"></span>*@
+
+                        @Html.DropDownListFor(model => model.VendorName, new List<SelectListItem>
+                          {
+                              new SelectListItem {Text = "Hardware", Value = "1", Selected = true },
+                              new SelectListItem {Text = "Software", Value = "2" },
+                              new SelectListItem {Text = "ATK", Value = "3" },
+                              new SelectListItem {Text = "Furniture", Value = "4" },
+                          }, new { @class = "form-control form-control-sm" })
+                        @Html.ValidationMessageFor(model => model.VendorName, "", new { @class = "text-danger" })
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -168,16 +178,16 @@
                 </div>
                 <div class="col-md-5">
                     <div class="form-group">
-                        <label asp-for="VendorPhone" class="control-label"></label>
+                        <label asp-for="ShippingPhone" class="control-label"></label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
                                     <i class="fas fa-phone-square"></i>
                                 </div>
                             </div>
-                            <input asp-for="VendorPhone" class="form-control  form-control-sm" />
+                            <input asp-for="ShippingPhone" class="form-control  form-control-sm" />
                         </div>
-                        <span asp-validation-for="VendorPhone" class="text-danger"></span>
+                        <span asp-validation-for="ShippingPhone" class="text-danger"></span>
                     </div>
                 </div>
             </div>
